@@ -1,0 +1,115 @@
+:root {
+    --blanco_fondo: #fff;
+    --verde_header: #b5d442;
+    --azul_footer: #1e364b;
+    --gris_menu: #e1e1e1;
+    --gris_menu_letras: #7f7f7f;
+    --gris_tarjeta: #cacaca;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--blanco_fondo);
+    font-family: 'Lato', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "navbar navbar"
+        "asidebar grilla"
+        "footer footer";
+}
+
+.navbar {
+    background-color: var(--verde_header);
+    color: var(--blanco_fondo);
+    height: 4em;
+    grid-area: navbar;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.navbar .titulo {
+    font-weight: 700;
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+.asidebar {
+    grid-area: asidebar;
+    background-color: var(--gris_menu);
+    width: 15em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 0px 20px;
+}
+.asidebar .categoria {
+    font-weight: 700;
+    font-size: 1.5em;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+.asidebar .categorias {
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+.categorias span {
+    color: var(--gris_menu_letras);
+}
+
+.grilla {
+    grid-area: grilla;
+    background-color: var(--gris_menu);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.grilla .tarjeta_producto {
+    background-color: var(--blanco_fondo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch; 
+}
+.tarjeta_producto img {
+    width: 100%;
+}
+.tarjeta_producto .producto {
+    font-weight: 700;
+    font-size: 1.1em;
+    margin: 10px 0 0 0 ;
+}
+.tarjeta_producto .precio {
+    font-weight: 400;
+    font-size: 1em;
+    margin: 10px 0 0 0 ;
+}
+.tarjeta_producto .boton_comprar {
+    border: 0;
+    background-color: var(--verde_header);
+    color: var(--blanco_fondo);
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    margin: 10px 0 0 0 ;
+}
+
+.footer {
+    background-color: var(--azul_footer);
+    color: var(--blanco_fondo);
+    height: 3em;
+    grid-area: footer;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    margin: 0;
+}
